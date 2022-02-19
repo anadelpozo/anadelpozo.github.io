@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand mr-5" href="#">
+      <img src="assets/logostartbucks.png" alt="" width="50" height="50" class="d-inline-block align-text-center">
+      CoffeDAM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item color-nav">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/inicio']" routerLinkActive="router-link-active" >Inicio</a>
+        </li>
+        <li class="nav-item color-nav">
+          <a class="nav-link" [routerLink]="['/cafeinformacion']" routerLinkActive="router-link-active" > Nuestro café</a>
+        </li>
+        <li class="nav-item dropdown color-nav">
+          <a role="button"
+          aria-expanded="false"
+          class="nav-link dropdown-toggle"
+          routerLinkActive="router-link-active"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown">
+            Productos
+             </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item color-nav" >
+                Bebidas Calientes &raquo;
+              </a>
+              <ul class="dropdown-menu dropdown-submenu">
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'espresso']" routerLinkActive="router-link-active" >Cafés</a></li>
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'chocolate']" routerLinkActive="router-link-active" >Chocolate</a>
+                </li>
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'infusiones']" routerLinkActive="router-link-active" >Infusiones</a>
+                </li>
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'te']" routerLinkActive="router-link-active" >Tés</a>                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item color-nav" >
+                Bebidas Frías &raquo;
+              </a>
+              <ul class="dropdown-menu dropdown-submenu">
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'frappuccino']" routerLinkActive="router-link-active" >Frappuccinos</a>                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item color-nav" >
+                Dulces &raquo;
+              </a>
+              <ul class="dropdown-menu dropdown-submenu">
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'muffins']" routerLinkActive="router-link-active" >Muffins</a>
+                </li>
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'glaseados']" routerLinkActive="router-link-active" >Glaseados</a>
+                </li>
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'bizcochos']" routerLinkActive="router-link-active" >Bizcochos</a>
+                </li>
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'tartas']" routerLinkActive="router-link-active" >Tartas</a>
+                </li>
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'cookies']" routerLinkActive="router-link-active" >Cookies</a>
+                </li>
+                <li>
+                  <a class="dropdown-item color-nav" [routerLink]="['/productos', 'bolleria']" routerLinkActive="router-link-active" >Bollería</a>
+                </li>
+              </ul>
+            </li>
+            <li><a class="dropdown-item color-nav" [routerLink]="['/productos', 'salados']" routerLinkActive="router-link-active" >Salados</a></li>
+            <li><a class="dropdown-item color-nav" [routerLink]="['/productos', 'ensaladas']" routerLinkActive="router-link-active" >Ensaladas</a></li>
+            <li><a class="dropdown-item color-nav" [routerLink]="['/productos', 'snacks']" routerLinkActive="router-link-active" >Snacks</a></li>
+          </ul>
+        </li>
+        <li class="nav-item color-nav">
+          <a class="nav-link  ms-auto hidden-sm-up float-right" aria-current="page" [routerLink]="['/carrito']" routerLinkActive="router-link-active" >Carrito</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; CoffeDAM 2022</div></footer>

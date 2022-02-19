@@ -1,0 +1,36 @@
+<div style="height: 90px;"></div>
+<ng-container mt-5 *ngIf="hayproductos; else elseTemplate">
+  <ng-container *ngIf="nopulsado; else elseTemplate">
+    <h1 class="m-5">Tu carrito</h1>
+    <div class="row">
+      <div *ngFor="let item of productosCarrito" class="col-2 m-4">
+        <div class="card" style="width: 18rem;">
+          <img [src]="item.imagen" class="card-img-top" [alt]="item.nombre" >
+          <div class="card-body">
+            <h5 class="card-title">{{item.nombre }}</h5>
+            <p class=card-text>Precio unidad: {{item.precio}} €</p>
+            <p class="card-text">Cantidad: {{item.cantidad}}</p>
+            <p class="card-text">Precio total: {{item.precio*item.cantidad}} €</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <h1 class="m-5">Precio del pedido: {{preciototal}} €</h1>
+      <button (click)="pulsado()" class="btn btn-success btpedido">Realizar pedido</button>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <div class="nocarrito">
+      <img class="imgcarrito"[src]="'gatito'|imagenproductos">
+      <h1 class="enocarrito">Has realizado tu pedido :)</h1>
+      </div>
+  </ng-template>
+</ng-container>
+<ng-template #elseTemplate>
+<div class="nocarrito">
+<img class="imgcarrito"[src]="'carrito'|imagenproductos">
+<h1 class="enocarrito">Tu carrito está vacio :(</h1>
+</div>
+</ng-template>
+if
+
+

@@ -1,0 +1,29 @@
+<div class="headerproducto">
+  <div class="containerheader">
+    <h1 class="tituloheader">{{titulo}}</h1>
+  </div>
+</div>
+<div class="row">
+<div *ngFor="let item of productostotales" class="col-2 m-4">
+  <div class="card" style="width: 18rem;">
+    <img [src]="item.imagen" class="card-img-top" [alt]="item.nombre" >
+    <div class="card-body">
+      <h5 class="card-title">{{item.nombre }}</h5>
+      <p class="card-text">{{item.precio}} €</p>
+      <select class="form-select" aria-label="Default select example" #cantidad>
+        <option selected value="1">Cantidad</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <button type="button" (click)="addCarrito(cantidad.value, item.nombre, item.precio, item.imagen)" class="btproductos btn btn-outline-success mt-3">Añadir al carrito</button>
+    </div>
+  </div>
+</div>
+</div>
